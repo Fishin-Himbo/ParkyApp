@@ -15,10 +15,10 @@ namespace ParkyAPI.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     NationalParkName = table.Column<string>(nullable: false),
                     StateId = table.Column<int>(nullable: false),
-                    CreatedDtim = table.Column<DateTime>(nullable: false),
-                    CreatedUser = table.Column<string>(nullable: false),
-                    ModifiedDtim = table.Column<DateTime>(nullable: false),
-                    ModifiedUser = table.Column<DateTime>(nullable: false)
+                    CreatedDtim = table.Column<DateTime>(nullable: false, defaultValue: DateTime.Now),
+                    CreatedUser = table.Column<string>(nullable: false, defaultValue: Environment.UserName),
+                    ModifiedDtim = table.Column<DateTime>(nullable: false, defaultValue: DateTime.Now),
+                    ModifiedUser = table.Column<DateTime>(nullable: false, defaultValue: Environment.UserName)
                 },
                 constraints: table =>
                 {
