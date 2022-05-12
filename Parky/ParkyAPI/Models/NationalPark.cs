@@ -24,6 +24,6 @@ namespace ParkyAPI.Models
         public DateTime ModifiedDtim { get; set; }
 
         [Required]
-        public DateTime ModifiedUser { get; set; }
+        public string ModifiedUser { get; set; }
     }
 }
